@@ -1,0 +1,141 @@
+:root {
+    /* Primary Color */
+    --color-pale-blue: hsl(225, 100%, 94%);
+    --color-bright-blue: hsl(245, 75%, 52%);
+
+    /* Neutral Color */
+    --color-very-pale-blue: hsl(225, 100%, 98%);
+    --color-desaturated-blue: hsl(224, 23%, 55%);
+    --color-dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    box-sizing: border-box;
+}
+
+#background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+#background svg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#container {
+    background-color: rgb(240, 240, 240);
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 450px;
+    border-radius: 20px;
+}
+
+#container .hero img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: var(--color-bright-blue);
+}
+
+#main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    width: 100%;
+}
+
+#main-content .heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 450px;
+    padding: 0 40px;
+    color: var(--color-desaturated-blue);
+}
+
+#main-content h1 {
+    color: var(--color-dark-blue);
+}
+
+#main-content .price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--color-very-pale-blue);
+    padding: 15px;
+    border-radius: 15px;
+    color: var(--color-dark-blue);
+    margin: 20px auto;
+}
+
+#main-content .price p:nth-child(2) {
+    color: var(--color-desaturated-blue);
+}
+
+#main-content .change-price a:hover {
+    text-decoration: none;
+    color: var(--color-desaturated-blue);
+}
+
+#main-content .payment-method {
+    background-color: var(--color-bright-blue);
+    width: 100%;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 15px var(--color-desaturated-blue);
+    margin-bottom: 30px;
+    transition: all 0.2s;
+}
+
+#main-content .payment-method:hover {
+    background-color: var(--color-desaturated-blue);
+    transition: all 0.2s;
+}
+
+#main-content .payment-method a {
+    color: white;
+    text-decoration: none;
+    height: max-content;
+    width: max-content;
+}
+
+#main-content .payment-method a:hover {
+    background-color: var(--color-pale-blue);
+    cursor: pointer;
+}
+
+#main-content .cancel-payment {
+    text-align: center;
+}
+
+#main-content .cancel-payment a {
+    text-decoration: none;
+    color: var(--color-desaturated-blue);
+    font-weight: 700;
+}
+
+#main-content .cancel-payment a:hover {
+    color: var(--color-dark-blue);
+}
